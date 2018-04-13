@@ -2,25 +2,28 @@
 public class Company {
 
 	// name der Company
-	public String name;
+	public static String name;
 
 	// parameter für company
+	//constructor
 	public Company(String cName) {
 		this.name = cName;
 	}
 
 	// getter
-	public String getName() {
+	public String getName(String string) {
 		return this.name;
 	}
 	
 	//Ausgabe Name + Preis
-	public void changeStockPrice(double price) {
-		Ticker.getInstance().print(this.name + price);
+	public void changeStockPrice(double d) {
+		Ticker.getInstance().print(this.name + d);
+
 	}
 	
 	//Falls insolvent Ausgabe
 	public void insolvent() {
-		Ticker.getInstance().print(name + " ist insolvent");
+		Ticker.getInstance().print(this.name + " ist insolvent");
+
 	}
 }

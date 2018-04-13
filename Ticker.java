@@ -5,22 +5,25 @@ public class Ticker {
 	//börsenticker Instanz
 	  private static Ticker börsenticker;
 	  // Verhindere die Erzeugung des Objektes über andere Methoden
-	  private Ticker () {}
+	  public Ticker() {}
+	  
 	  // Eine Zugriffsmethode auf Klassenebene, welches dir '''einmal''' ein konkretes 
 	  // Objekt erzeugt und dieses zurückliefert.
-	  // Durch 'synchronized' wird sichergestellt dass diese Methode nur von einem Thread 
-	  // zu einer Zeit durchlaufen wird. Der nächste Thread erhält immer eine komplett 
-	  // initialisierte Instanz.
-	  public static synchronized Ticker getInstance () {
+	  // nur ein Objekt kann man erzeugen!
+	  // static damit wir nicht nur auf methoden sondern auch auf Klassen aufrufbar
+	  public static Ticker getInstance() {
 	    if (Ticker.börsenticker == null) {
-	      Ticker.börsenticker = new Ticker ();
+	      Ticker.börsenticker = new Ticker();
 	    }
 	    return Ticker.börsenticker;
 	  }
-	  public String trennzeichen = "+++";
 	  
+	  // %s Platzhalter für den String
+	  // \n new line 
 	  public void print(String text) {
-		  System.out.print(trennzeichen + text );
+		   String ausgabe=text.replaceAll("\n", "");
+		    
+		    System.out.printf(" %s +++", ausgabe);
 	  }
 	}
 
