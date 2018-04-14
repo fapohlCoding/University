@@ -2,28 +2,27 @@
 public class Ticker {
 
 	 // Eine (versteckte) Klassenvariable vom Typ der eigene Klasse
-	//börsenticker Instanz
-	  private static Ticker börsenticker;
-	  // Verhindere die Erzeugung des Objektes über andere Methoden
+	//bÃ¶rsenticker Instanz
+	  private static Ticker bÃ¶rsenticker;
+	  // Verhindere die Erzeugung des Objektes Ã¼ber andere Methoden
 	  public Ticker() {}
-	  
-	  // Eine Zugriffsmethode auf Klassenebene, welches dir '''einmal''' ein konkretes 
-	  // Objekt erzeugt und dieses zurückliefert.
+
+	  // Eine Zugriffsmethode auf Klassenebene, welches dir '''einmal''' ein konkretes
+	  // Objekt erzeugt und dieses zurÃ¼ckliefert.
 	  // nur ein Objekt kann man erzeugen!
 	  // static damit wir nicht nur auf methoden sondern auch auf Klassen aufrufbar
 	  public static Ticker getInstance() {
-	    if (Ticker.börsenticker == null) {
-	      Ticker.börsenticker = new Ticker();
+	    if (Ticker.bÃ¶rsenticker == null) {
+	      Ticker.bÃ¶rsenticker = new Ticker();
 	    }
-	    return Ticker.börsenticker;
+	    return Ticker.bÃ¶rsenticker;
 	  }
-	  
-	  // %s Platzhalter für den String
-	  // \n new line 
+
+	  // %s Platzhalter fÃ¶r den String
+	  // \n new line
 	  public void print(String text) {
 		   String ausgabe=text.replaceAll("\n", "");
-		    
+
 		    System.out.printf(" %s +++", ausgabe);
 	  }
 	}
-
