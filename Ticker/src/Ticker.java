@@ -5,7 +5,7 @@ public class Ticker {
 	//börsenticker Instanz
 	  private static Ticker börsenticker;
 	  // Verhindere die Erzeugung des Objektes über andere Methoden
-	  public Ticker() {}
+	  private Ticker() {}
 
 	  // Eine Zugriffsmethode auf Klassenebene, welches dir '''einmal''' ein konkretes
 	  // Objekt erzeugt und dieses zurückliefert.
@@ -18,7 +18,7 @@ public class Ticker {
 	    return Ticker.börsenticker;
 	  }
 
-	  // %s Platzhalter för den String
+	  // %s Platzhalter fuer den String
 	  // \n new line
 	  public void print(String text) {
 		   String ausgabe=text.replaceAll("\n", "");
