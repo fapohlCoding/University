@@ -1,0 +1,26 @@
+package EqualsHashcode;
+
+public class TestingEqualsHashcode {
+
+    public static void main(String[] args)  {
+        Student c1 = new Student("fabian", 123456);
+        Student c2 = new Student("fabian", 123456);
+        
+        Person d1 = new Person("fabian");
+        Person d2 = new Person("fabian");
+        
+        
+        System.out.println("c1: " + c1);
+        System.out.println("c2: " + c2);
+       
+         
+        System.out.println("c1: " + c1);
+        System.out.println(" == :" + (c1 == c2));
+        System.out.println("equals: " + c1.equals(c2));
+        System.out.println("hashcode(c1): " + c1.hashCode());
+        System.out.println("hashcode(c2): " + c2.hashCode());
+        Double d = new Double(3);
+        Student e = new Student("locker", 0);
+        System.out.println("equals: " + e.equals(d));        
+    }
+}
