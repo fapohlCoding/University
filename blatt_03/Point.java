@@ -66,16 +66,18 @@ public class Point extends Geometry {
 	 * 			coordinates, and the other one with the max coordinates.
 	 */
     public Point[] punkt(Geometry other, Point x) {
-		Point a = ((Volume)other).getP1();
-		Point b = ((Volume) other).getP2();
-		double[] punkt1 = new double[x.dimensions()];
-		double[] punkt2 = new double[x.dimensions()];
-		for(int i = 0; i < x.dimensions(); i++ ) {
-			double[] tmp = selectionSort(a.getKoord()[i], b.getKoord()[i], x.getKoord()[i]);
-			punkt1[i]=tmp[0];
-			punkt2[i]=tmp[tmp.length-1]; 
-		}
-		return new Point[]{new Point(punkt1), new Point(punkt2)};	
+			Point a = ((Volume)other).getP1();
+			Point b = ((Volume) other).getP2();
+			double[] punkt1 = new double[x.dimensions()];
+			double[] punkt2 = new double[x.dimensions()];
+
+			for(int i = 0; i < x.dimensions(); i++ ) {
+				double[] tmp = selectionSort(a.getKoord()[i], b.getKoord()[i], x.getKoord()[i]);
+				punkt1[i]=tmp[0];
+				punkt2[i]=tmp[tmp.length-1]; 
+			}
+
+			return new Point[]{new Point(punkt1), new Point(punkt2)};	
     }
 
 	/**

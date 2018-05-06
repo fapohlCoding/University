@@ -56,9 +56,6 @@ public class Volume extends Point implements Comparable {
     public geometry encapsulate(Geometry other) { 
 		super.encapsulate( other );
     }
-
-    
-    
    /*		---------
     *   	|		|
     *   	|		|
@@ -74,6 +71,7 @@ public class Volume extends Point implements Comparable {
     * 					---------
     */
 
+	
     @Override
     public double volume() {
 	// Methode multipliziert jede Tiefe auf und gibt dann das Ergebnis aus
