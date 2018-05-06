@@ -71,28 +71,31 @@ public class Volume extends Point implements Comparable {
     * 					---------
     */
 
-	
+
+	/**
+	 * Returns the value of the Volume of this Geometry
+	 * 
+	 */
     @Override
     public double volume() {
-	// Methode multipliziert jede Tiefe auf und gibt dann das Ergebnis aus
-	// erg=a*b*c*....
-	Point a = this.getP1();
-	Point b = this.getP2();
-	double[] punkt1 = new double[this.dimensions()];
-	double[] punkt2 = new double[this.dimensions()];
-	for (int i = 0; i < this.dimensions(); i++) {
-	    double[] tmp = selectionSort(a.getKoord()[i], b.getKoord()[i]);
-	    // System.out.println("Hier"+i);
-	    punkt1[i] = tmp[0];
-	    punkt2[i] = tmp[tmp.length - 1];
-	}
-	double erg = 1;
-	for (int i = 0; i < punkt1.length; i++) {
-	    erg *= (punkt1[i] - punkt2[i]);
-	}
-	if (erg < 0)
-	    erg *= -1;
-	return erg;
+		// erg=a*b*c*....
+		Point a = this.getP1();
+		Point b = this.getP2();
+		double[] punkt1 = new double[this.dimensions()];
+		double[] punkt2 = new double[this.dimensions()];
+		for (int i = 0; i < this.dimensions(); i++) {
+			double[] tmp = selectionSort(a.getKoord()[i], b.getKoord()[i]);
+			// System.out.println("Hier"+i);
+			punkt1[i] = tmp[0];
+			punkt2[i] = tmp[tmp.length - 1];
+		}
+		double erg = 1;
+		for (int i = 0; i < punkt1.length; i++) {
+			erg *= (punkt1[i] - punkt2[i]);
+		}
+		if (erg < 0)
+			erg *= -1;
+		return erg;
     }
 
     @Override

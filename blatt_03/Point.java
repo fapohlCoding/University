@@ -2,6 +2,8 @@ package Vererbung;
 
 import javax.management.RuntimeErrorException;
 
+import sun.net.www.content.audio.wav;
+
 /**
  * Represents a n-dimensional Point of data. 
  */
@@ -46,13 +48,13 @@ public class Point extends Geometry {
 	 * @return new Geometry another shape that will encapsulate other and this.
 	 */
     public Geometry encapsulate(Geometry other) {
-		if( super.dimensions() != other.dimensions()) { return null; }
-		if( other instanceof Point && this.getKoord().length == 2 ){
-			return new Rectangle(new Point2D(getKoord()), 
-					new Point2D(((Point)other).getKoord()));
-		} else {
-			Point[] hut = punkt(other, this );
-			return new Volume(hut[0], hut[1]);
+			if( super.dimensions() != other.dimensions()) { return null; }
+			if( other instanceof Point && this.getKoord().length == 2 ){
+				return new Rectangle(new Point2D(getKoord()), 
+						new Point2D(((Point)other).getKoord()));
+			} else {
+				Point[] hut = punkt(other, this );
+				return new Volume(hut[0], hut[1]);
 			}
 	}
 	
