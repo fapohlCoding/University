@@ -13,7 +13,9 @@ public class LibraryTest {
 		Library bib = new Library();
 
 		System.out.println("We are testing, if the library is empty");
-		List booklist = bib.search("LoL");
+
+		List booklist = bib.search("l");
+	
 		if (booklist == null) {
 			System.out.println("Library is correctly empty");
 		} else
@@ -28,11 +30,7 @@ public class LibraryTest {
 		  LibraryItem book3 = new Book("I am Zlatan ", "Zlatan Ibrahimovic");
 		  LibraryItem book4 = new Book("The Lord of the Rings ", "J. R. R. Tolkien");
 		  
-		  book1.setBorrowed(); 
-		  book2.setBorrowed(); 
-		  book3.setBorrowed();
-		  book4.setBorrowed();
-		  
+		
 		  LibraryItem blu1 = new BluRay(" Dragon Ball Z - Battle of Gods ","Masahiro Hosoda"); 
 		  LibraryItem blu2 = new BluRay(" Wolf of Wallstreet ","Martin Scorsese"); 
 		  LibraryItem blu3 = new BluRay(" Warcraft - The Beginning ","Duncan Jones");
@@ -50,15 +48,24 @@ public class LibraryTest {
 		  bib.addItem(blu4);
 		  
 		  blu1.setBorrowed(); 
-		  blu2.setBorrowed(); 
-		  blu3.setBorrowed();
-		  blu4.setBorrowed();
+		  blu3.setBorrowed(); 
+		
+		  book1.setBorrowed(); 		
+		  book4.setBorrowed();
+		  
 		  
 		  System.out.println("");
-		  System.out.println("Test if book is borrowed");
+		  System.out.println("Test if blueray is borrowed");
 		  if (blu3.isBorrowed()){
 			  System.out.println("Book is correctly borrowed");
 		  } else  System.out.println("Book is wrongly not borrowed");
+		  System.out.println("");
+		  
+		  System.out.println("");
+		  System.out.println("Test if blueray is borrowed");
+		  if (book3.isBorrowed()){
+			  System.out.println("Book is wrongly borrowed");
+		  } else  System.out.println("Book is correctly not borrowed");
 		  System.out.println("");
 		  
 		  
@@ -83,16 +90,16 @@ public class LibraryTest {
 		  
 		  
 		  System.out.println("Testing if the library is empty");
+		
 		  
 		 /*Warum funtkioniert if(booklist.isEmpty() == true) nicht? */
-		  booklist = bib.search("wolf of wallstreet"); 
-		  System.out.println(booklist);
-		  if (booklist.isEmpty() == true){
+		  booklist = bib.search("w"); 
+		  if (booklist.isEmpty()){
 		  System.out.println("Library is wrongly empty"); } 
 		  else
-		  System.out.println("Library is correctly not empty");
-		  
-		  
+		  System.out.println("Library is correctly not empty"); 
+	
+		 
 		  System.out.println();
 		  
 		  
@@ -103,9 +110,9 @@ public class LibraryTest {
 		  
 		  System.out.println("We test if the book is correctly deleted");
 		  
-		  booklist = bib.search("Lord of the Rings - The return of the King"); 
+		  booklist = bib.search("lord"); 
 		  if
-		  (booklist == null) {
+		  (booklist.isEmpty()) {
 		  
 		  System.out.println("book has been deleted correctly");
 		  
