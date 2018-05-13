@@ -8,7 +8,7 @@ package Bibliothek;
 public class LibraryTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 
 		Library bib = new Library();
 
