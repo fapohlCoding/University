@@ -92,7 +92,7 @@ public class LibraryTest {
 		  System.out.println("Testing if the library is empty");
 		
 		  
-		 /*Warum funtkioniert if(booklist.isEmpty() == true) nicht? */
+		
 		  booklist = bib.search("w"); 
 		  if (booklist.isEmpty()){
 		  System.out.println("Library is wrongly empty"); } 
