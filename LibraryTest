@@ -54,6 +54,12 @@ public class LibraryTest {
 		  blu3.setBorrowed();
 		  blu4.setBorrowed();
 		  
+		  System.out.println("");
+		  System.out.println("Test if book is borrowed");
+		  if (blu3.isBorrowed()){
+			  System.out.println("Book is correctly borrowed");
+		  } else  System.out.println("Book is wrongly not borrowed");
+		  System.out.println("");
 		  
 		  
 		  
