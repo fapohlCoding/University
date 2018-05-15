@@ -1,16 +1,18 @@
 package Vererbung;
 
-
 public abstract class Geometry {
 
-   
    private int dimension;
+<<<<<<< HEAD:blatt_03/Geometry.java
+    
+=======
 
    /**
     * Create a new Geometry.
     *
     */
  
+>>>>>>> c731e3b63be2b0b2ab345e5f468d9514566c636c:Geometry
    public Geometry(int dimension) {
       if (dimension < 2) {
          throw new RuntimeException("Dimension ist < 2");
@@ -18,14 +20,28 @@ public abstract class Geometry {
       this.dimension = dimension;
    }
 
+<<<<<<< HEAD:blatt_03/Geometry.java
+=======
    /**
     * 
     * @return number of dimensions of this Geometry
     */
+>>>>>>> c731e3b63be2b0b2ab345e5f468d9514566c636c:Geometry
    public int dimensions() {
       return this.dimension;
    }
     
+<<<<<<< HEAD:blatt_03/Geometry.java
+   ////// TO IMPLEMENT IN THE CHILDREN ///////////////
+   public abstract double volume();
+
+   public abstract Geometry intersect(Geometry other);
+
+    public int compareTo(Object o) {
+        return 0;
+    }
+   ////// TO IMPLEMENT IN THE CHILDREN ///////////////
+=======
    /**
     * 
     * @return volume of this Geometry
@@ -53,4 +69,5 @@ public abstract class Geometry {
 	return 0;
 }
 
+>>>>>>> c731e3b63be2b0b2ab345e5f468d9514566c636c:Geometry
 }
