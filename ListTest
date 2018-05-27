@@ -7,14 +7,14 @@ public class ListTest {
 
    public static void main(String[] args) {
 
-      ListGeneric<String> list = new ListGeneric<String>();
+      GenericList<String> list = new GenericList<>();
 
-      list.add("1");
-      list.add("2");
-      list.add("3");
-      list.add("4");
+      list.add("a");
+      list.add("b");
+      list.add("c");
+      list.add("d");
 
-      ListGeneric<String> clone = list.clone();
+      GenericList<String> clone = list.clone();
 
       cloneTest(list,clone);
    }
@@ -28,7 +28,7 @@ public class ListTest {
       }
       System.out.println();
 
-      System.out.println("x.clone.getClass() == x.getClass()");
+      System.out.println("x.clone.getClass() == x.getClass(), which is not an absolute requirement");
       if (clone.getClass() == x.getClass()) {
          System.out.println("Passed");
       } else {
@@ -36,7 +36,7 @@ public class ListTest {
       }
       System.out.println();
 
-      System.out.println(" x.clone().equals(x)");
+      System.out.println(" x.clone().equals(x), which is not an absolute requirement");
       if (clone.equals(x)){
          System.out.println("Passed");
       } else {
