@@ -8,6 +8,7 @@ import java.io.RandomAccessFile;
 
 /**
  * 	@author Fabian Pohl
+ *
  */
 
 public class PersArray {
@@ -191,7 +192,7 @@ public class PersArray {
      */
     public void close() {
 	try {
-	    f.close();					// file wird  endgültig geschlossen
+	    f.close();					// file wird  endgÃ¼ltig geschlossen
 	} catch (IOException e) {
 	    System.out.println("Schliessen hat nicht funktioniert. Bitte erneut versuchen!");
 	    e.printStackTrace();
