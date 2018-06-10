@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="blatt_03/|blatt_06/|blatt_01/Fraction/src/|blatt_01/Ticker/src/|blatt_01/StringStack/src/" kind="src" path=""/>
+	<classpathentry kind="src" path="blatt_01/Fraction/src"/>
+	<classpathentry kind="src" path="blatt_01/StringStack/src"/>
+	<classpathentry kind="src" path="blatt_01/Ticker/src"/>
+	<classpathentry kind="src" path="blatt_03"/>
+	<classpathentry kind="src" path="blatt_06"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
