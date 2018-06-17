@@ -22,6 +22,8 @@ public class TestReader {
 				BufferedReader bufin = new BufferedReader(new InputStreamReader(filein));
 				Reader1 read = new Reader1(bufin, args[0]);)
 				
+			
+			//KOMMANDOZEILE FUNKTIONIERT IN ECLIPSE NICHT
 //				InputStreamReader ReaderIn = new InputStreamReader(System.in);
 //		//	BufferedReader bufin = new BufferedReader(new InputStreamReader(System.in));
 //			Reader1 read = new Reader1(ReaderIn, args[0]);
